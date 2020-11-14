@@ -1,12 +1,10 @@
 <?php
 function status(){
-     $mysqli = new mysqli('localhost','root','password','accounts');
+     $mysqli = new mysqli('localhost','root','','accounts');
      $sql = 'SELECT * FROM status';
      $result = $mysqli->query($sql);
  ?>
 <div id="registered">
-
-
 
 <?php
       while ($ro = $result->fetch_assoc()) {
@@ -40,7 +38,7 @@ function recent_deals(){
 }
 ?>
 <?php
-function social_user_status(){
+function social_user_status() {
      $su_id=$_SESSION['su_id'];
      $mysqli = new mysqli('localhost','root','password','accounts');
      $sql = "SELECT * FROM status WHERE id='$su_id' ";

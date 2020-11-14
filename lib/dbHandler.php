@@ -6,7 +6,7 @@ class DBHandler {
     private $username;
     private $password;
     private $dbName;
-    private $myDb;
+    protected $myDb;
 
     function __construct() {
         $this->server   = SERVER;
