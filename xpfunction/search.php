@@ -1,23 +1,5 @@
 <?php
-    function search(){
-    if (isset($_POST['search'])) {
-      $sts=1;
-      $_SESSION["message"]='';
-      $mysqli=new mysqli('localhost','root','password','accounts');
-      $search=$_POST['search'];
-      $sql = "SELECT * FROM `status` WHERE `status` LIKE '%$search%'";
-      $result = $mysqli->query($sql);
-         if ($result) {
-           while ($row = $result->fetch_assoc()) {
-             echo "<div class='userlist'><span>$row[status]</span><br>";
-             echo "<a href=item.php?item_sid=",$row['sid'],">";
-             echo "<img src ='$row[image]'></a><br>";
-             echo "Bid Amount:$row[bid]</div>";
-
-           }
-         }
-    }
-}?>
+?>
 
 <div id ="registered_search" >
 <?php
